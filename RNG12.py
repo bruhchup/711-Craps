@@ -1,6 +1,6 @@
 from random import seed
 from random import randint
-import math
+
 bal = int(input("enter deposit amount"))
 while True:
 	agn = input("Want to roll? y/n")
@@ -8,18 +8,18 @@ while True:
 		break
 	elif agn == "n":
 		input ("enter any key to close program")
-		sys.exit
+		exit
 	else:
 		print ("invalid input")
 		continue
 while agn == "y":
-	num = randint(2,12)
+	num = randint(2,13)
 	print (num)
-	if num != 7 or 11:
+	if num == 7 or 11:
 		bal = bal - 2
 		print(bal)
-	elif num == 7 or 11:
-		bal = bal + 1
+	else:
+		bal = bal - 2
 		print(bal)
 
 	while True: 
@@ -28,7 +28,7 @@ while agn == "y":
 			break
 		elif agn == "n":
 			input ("enter any key to close program")
-			sys.exit
+			exit
 		else:
 			print ("invalid input")
 			continue
